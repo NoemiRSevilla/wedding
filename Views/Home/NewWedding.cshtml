@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" media="screen" href="~/css/styling.css"/>
+@model WeddPlan
+@using Wedding.Models
+<div id="wrapper">
+    <a class="btn btn-primary" href="../Dashboard" >Dashboard</a>
+    <h1>Plan Your Wedding</h1>
+     <form asp-action="addWedding" asp-controller="Home" method="post">
+            <div class="form-group">
+                <span asp-validation-for="WedderOne"></span>
+                <label asp-for="WedderOne"></label>
+                <input asp-for="WedderOne" class="form-control">
+            </div>
+            <div class="form-group">
+                <span asp-validation-for="WedderTwo"></span>
+                <label asp-for="WedderTwo"></label>
+                <input asp-for="WedderTwo" class="form-control">
+            </div>
+            <div class="form-group">
+                <span asp-validation-for="WeddingDate"></span>
+                <label asp-for="WeddingDate"></label>
+                <input asp-for="WeddingDate" class="form-control">
+            </div>    
+            <div class="form-group">
+                <span asp-validation-for="Address"></span>
+                <label asp-for="Address"></label>
+                <input asp-for="Address" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success">Create</button>
+        </form>
+</div>

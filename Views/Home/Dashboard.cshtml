@@ -1,0 +1,73 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" media="screen" href="~/css/styling.css" />
+@model WeddPlan
+<div id="wrapper">
+    <h1>Welcome to the Wedding Planner</h1>
+    <a href="../logout">Log out</a>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Wedding</th>
+                <th scope="col">Date</th>
+                <th scope="col">Guest</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+
+
+            @foreach(var x in @ViewBag.weddings)
+            {
+                bool going = false;
+            <tr>
+                <td><a href="DisplayWedd/@x.WeddPlanId">@x.WedderOne & @x.WedderTwo</a></td>
+                <td>@x.WeddingDate</td>
+                <td>@x.GuestList.Count</td>
+                <td>
+                    
+                    @if(@x.WeddingPlanner == @ViewBag.User)
+                    {
+                    <form action="../delete/@x.WeddPlanId" method="post">
+                        <button type="submit" class="btn btn-success">Delete</button>
+                    </form>
+                    }
+                    else
+                    {
+                         @foreach (var y in x.GuestList)
+                    {
+                        
+                        
+                        @if(@ViewBag.User == y.User.UserId)
+                        {
+                            going = true;
+                        }
+                    }
+                        @if(going == true)
+                        {
+                        <form action="../removeRsvp/@x.WeddPlanId" method="post">
+                        <button type="submit" class="btn btn-success">UN-RSVP</button>
+                        </form>
+                        }
+                        else
+                        {
+                        <form action="../addRsvp/@x.WeddPlanId" method="post">
+                        <button type="submit" class="btn btn-success">RSVP</button>
+                        </form>
+                        }
+                    
+                        
+                    }
+                   
+                </td>
+            </tr>
+            }
+
+
+        </tbody>
+    </table>
+</div>
+<a class="btn btn-primary" href="../newWedding">New Wedding</a>
+
+</div>

@@ -1,0 +1,27 @@
+body{
+    
+    background: url("/images/weding.jpg")no-repeat center center fixed;
+    
+    -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+ padding: 15px;
+}
+#wrapper{
+    margin: auto;
+}
+.box1{
+    border-radius: 25px;
+    border: 5px solid black;
+    width: 400px;
+    padding: 20px;
+    display: inline-block;
+}
+.box2{
+    border-radius: 25px;
+    border: 5px solid black;
+    width: 400px;
+    padding: 20px;
+    display: inline-block;
+}

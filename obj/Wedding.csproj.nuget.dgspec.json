@@ -1,0 +1,85 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/Bad_mutha/Documents/CSharp_projects/Wedding/Wedding.csproj": {}
+  },
+  "projects": {
+    "/Users/Bad_mutha/Documents/CSharp_projects/Wedding/Wedding.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/Bad_mutha/Documents/CSharp_projects/Wedding/Wedding.csproj",
+        "projectName": "Wedding",
+        "projectPath": "/Users/Bad_mutha/Documents/CSharp_projects/Wedding/Wedding.csproj",
+        "packagesPath": "/Users/Bad_mutha/.nuget/packages/",
+        "outputPath": "/Users/Bad_mutha/Documents/CSharp_projects/Wedding/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/Bad_mutha/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Geocoding.Google": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            },
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.1, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.2, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.11, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[2.1.2, )"
+            },
+            "gmaps-api-net": {
+              "target": "Package",
+              "version": "[0.32.0, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}
